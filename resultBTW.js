@@ -1,15 +1,8 @@
 const resultBtw = document.querySelector(".js-result-btw"),
   fromDate = document.querySelector(".js-from"),
   toDate = document.querySelector(".js-to");
-//++ 주행거리(km)/ 소모된 연료량(l) = 연비+++
-//( to 주행거리-from주행거리 )/ 소모 연료량(from-to 모든 연료량 더하기)
 
 const range = [];
-
-function getResultFromDates(range) {
-  //index 0:from  1:to
-  console.log(range);
-}
 
 function findIndexTo(text) {
   const loadedData = localStorage.getItem(DATA_LS);
@@ -36,8 +29,21 @@ function findIndexFrom(text) {
   const foundDate = parsedData.find(findDate);
   console.log(parsedData.indexOf(foundDate)); //from 오브젝 인덱스
   const objIndex = parsedData.indexOf(foundDate);
+  console.log(dataArr[objIndex]);
   range.push(dataArr[objIndex]);
   getResultFromDates(range);
+}
+//++ 주행거리(km)/ 소모된 연료량(l) = 연비+++
+//( to 주행거리-from주행거리 )/ 소모 연료량(from-to 모든 연료량 더하기)
+
+function getResultFromDates(range) {
+  //index 0:from  1:to
+  console.log(range);
+  console.log(range[1]);
+  console.log(typeof range[1]);
+  const currentData = range[1];
+  console.log(currentData);
+  console.log(currentData.totalTrip); ///무엇???
 }
 
 function getDateTo(event) {
