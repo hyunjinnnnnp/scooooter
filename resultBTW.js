@@ -30,7 +30,7 @@ function findIndexFrom(text) {
   console.log(parsedData.indexOf(foundDate)); //from 오브젝 인덱스
   const objIndex = parsedData.indexOf(foundDate);
   console.log(dataArr[objIndex]);
-  range.push(dataArr[objIndex]);
+  range.push(dataArr[objIndex])
   getResultFromDates(range);
 }
 //++ 주행거리(km)/ 소모된 연료량(l) = 연비+++
@@ -38,12 +38,9 @@ function findIndexFrom(text) {
 
 function getResultFromDates(range) {
   //index 0:from  1:to
-  console.log(range);
-  console.log(range[1]);
-  console.log(typeof range[1]);
-  const currentData = range[1];
-  console.log(currentData);
-  console.log(currentData.totalTrip); ///무엇???
+console.log(range)
+console.log(range.length)
+console.log(range[1].coast)
 }
 
 function getDateTo(event) {

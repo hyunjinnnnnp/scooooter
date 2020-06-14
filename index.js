@@ -38,12 +38,14 @@ function calculate() {
 
   const loadedData = localStorage.getItem(DATA_LS);
   const parsedData = JSON.parse(loadedData);
+  if(parsedData !==null){
   const currentTotalTrip = parsedData[parsedData.length - 1].totalTrip;
   const previousTotalTrip = parsedData[parsedData.length - 2].totalTrip;
   const currentCharge = parsedData[parsedData.length - 1].liter;
   const result = (currentTotalTrip - previousTotalTrip) / currentCharge;
 
   resultShowing(result);
+  }
 }
 
 function drawSubmit(obj) {
