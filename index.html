@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="js-form">
+      <input type="date" class="js-date" placeholder="날짜" />
+      <input type="number" class="js-coast" placeholder="주유금액" />
+      <input
+        type="number"
+        class="js-literFilled"
+        placeholder="최근 주유량(l)"
+      />
+      <input
+        type="number"
+        class="js-totalTrip"
+        placeholder="총 주행거리(누적)"
+      />
+
+      <button type="submit" class="js-submit"></button>
+    </form>
+
+    <ul class="submit-list js-title"></ul>
+
+    <div class="js-result"></div>
+    <div class="js-result-btw">
+      <form class="js-date-select">
+        <div>지정 날짜 연비 구하기</div>
+        <input type="date" class="js-from" /> <span>부터</span>
+        <input type="date" class="js-to" />
+        <span>까지</span>
+      </form>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="resultBTW.js"></script>
+  </body>
+</html>

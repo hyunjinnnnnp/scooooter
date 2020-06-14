@@ -1,0 +1,9 @@
+.submit-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-list li {
+  display: flex;
+  justify-content: space-around;
+}
